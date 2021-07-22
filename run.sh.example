@@ -1,0 +1,16 @@
+# Environment RabbitMq settings:
+export RABBIT_MQ_DIAL="amqp://guest:guest@localhost:5672/"
+export RABBIT_MQ_QUEUE="q-mailer"
+
+# Environment SMTP settings:
+export SMTP_HOST="smtp.gmail.com"
+export SMTP_PORT=587
+export SMTP_EMAIL_ADDRESS="someemail@gmail.com"
+export SMTP_EMAIL_PASSWORD="email_password"
+
+# Download all the dependencies that are required in your source files and update go.mod file with that dependency and
+# remove all dependencies from the go.mod file which are not required in the source files.
+go mod tidy
+
+# Run app
+go run main.go
